@@ -504,30 +504,45 @@ hr {
 
 /* CONTACT */
 
-.contact {
-    padding: 65px 0;
-    background-color: #ececec;
+#contact {
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 
-.form-button {
-    padding: 20px 100px;
+#contact .desc {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.87);
 }
 
-.link-text {
-    color: #fff;
+.icon-me {
+    text-align: center;
+    font-size: 5em;
+    color: rgba(200, 100, 100, 0.7);
+    padding-top: 20px;
+    padding-bottom: 25px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.30);
 }
 
-.link-text:hover {
-    color: #e38333;
+.line {
+    height: 3px;
+    width: 100px;
+    position: relative;
+    top: -12px;
+    display: inline-block;
+    background-color: #999;
 }
 
-.btn-warning {
-    background-color: #e38333 !important;
-    border-color: #e38333 !important;
+.line.about {
+    background-color: rgba(0, 0, 0, 0.54);
 }
 
-.btn-warning:hover {
-    background-color: #222b3b !important;
-    border-color:  #222b3b !important;
-    color: #fff;
+.section-title.about {
+    color: rgba(0, 0, 0, 0.54);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.75);
+}
+
+.dev {
+    padding:1em;
 }
