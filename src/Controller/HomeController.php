@@ -19,9 +19,10 @@ class HomeController extends AbstractController
     public function index(Request $request,ProjectRepository $project) :Response
     {
 
+
         return $this->render('index.html.twig', [
             'projects' => $project->findAll(),
-        
+            'form' => $form->createView(),
         ]);
     }
 }
