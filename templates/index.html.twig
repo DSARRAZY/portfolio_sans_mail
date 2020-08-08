@@ -1,0 +1,242 @@
+{% extends 'base.html.twig' %}
+
+ {% block body %}
+     <section id="header">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-6">
+                     <div class="intro-text">
+                         <div class="overlay">
+                             <h1>Bienvenue sur mon Portfolio!</h1>
+                             <h2>Developpement web | Graphisme</h2>
+                             <h3>Vous êtes au bon endroit</h3>
+                             <a href="#about" class="js-scroll-trigger"><button type="button" class="btn btn-warning">En savoir plus !</button></a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+     <!-- ABOUT -->
+
+     <section id="about">
+         <div class="container">
+             <div class="row justify-content-center">
+                 <div class="col-md-12 col-md-offset-2">
+                     <div class="quote-card">
+                         <div class="quote-marks">“</div>
+                         <div class="quote">
+                             <div class="quote-text text-justify">
+                                 Après 15 ans passés dans le domaine du funéraire, j'ai décidé de me lancer dans l'aventure du numérique. Actuellement en fin de formation à la WILD CODE SCHOOL de Tours.
+                                <br>
+                                 Préparation du titre Développeur Web et Web mobile sur le langage PHP/SYMFONY.
+                                 <br>
+                                 Mail : d.sarrazy@gmail.com
+                                 Tél : 0616951009
+                                 <a class="president_link" href="https://www.linkedin.com/in/damien-sarrazy-7b18bb169/" target="_blank"">en savoir plus...</a>
+                             </div>
+                         </div>
+                         <div class="quote-profile clearfix">
+                             <div class="quote-author-image"><img src="{{ asset('build/SARRAZYD.jpg') }}" alt="A propos de moi image" />
+                             </div>
+                             <div class="quote-author-name"> Damien SARRAZY
+                                 <span class="quote-author-info">Developpeur web</span>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+     <!-- SKILLS -->
+
+     <section id="skills">
+         <div class="skills_container container">
+
+             <div class="card skills_card">
+                 <div class="title">
+                    HMTL 5
+                 </div>
+                 <div class="circle">1</div>
+                 <div class="skills_content">
+                     <div class="icon">
+                         <i class="fab fa-html5 fa-3x"></i>
+                     </div>
+                 </div>
+             </div>
+
+             <div class="card skills_card">
+                 <div class="title">
+                   CSS
+                 </div>
+                 <div class="circle">2</div>
+                 <div class="skills_content">
+                     <div class="icon">
+                         <i class="fab fa-css3-alt fa-3x"></i>
+                     </div>
+                 </div>
+             </div>
+
+             <div class="card skills_card">
+                 <div class="title">
+                     PHP
+                 </div>
+                 <div class="circle">3</div>
+                 <div class="skills_content">
+                     <div class="icon">
+                         <i class="fab fa-php fa-3x"></i>
+                     </div>
+                 </div>
+             </div>
+
+             <div class="card skills_card">
+                 <div class="title">
+                     J.SCRIPT
+                 </div>
+                 <div class="circle">4</div>
+                 <div class="skills_content">
+                     <div class="icon">
+                         <i class="fab fa-js-square fa-3x"></i>
+                     </div>
+                  </div>
+               </div>
+
+         <div class="card skills_card">
+             <div class="title">
+                 GIT ET GITHUB
+             </div>
+             <div class="circle">5</div>
+             <div class="skills_content">
+                 <div class="icon">
+                     <i class="fab fa-git fa-3x"></i>
+                 </div>
+             </div>
+         </div>
+
+             <div class="card skills_card">
+                 <div class="title">
+                     LINUX
+                 </div>
+                 <div class="circle">6</div>
+                 <div class="skills_content">
+                     <div class="icon">
+                         <i class="fab fa-linux fa-3x"></i>
+                     </div>
+                 </div>
+             </div>
+
+         </div>
+     </section>
+
+     <!-- ANIMATION -->
+
+     <section id="animation">
+         <h1 class="ml6">
+            <span class="text-wrapper">
+                <span class="letters">Don't stop learning !</span>
+            </span>
+         </h1>
+     </section>
+
+     <!-- PORTFOLIO -->
+
+     <section id="portfolio">
+         <div class="portfolio">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-md-6 text-center m-auto">
+                         <h3>PORTFOLIO</h3>
+                         <p>Vous trouverez ici mes projets les plus récents</p>
+                     </div>
+                 </div>
+                 <hr>
+                 <div class="row">
+
+                    {% for project in projects %}
+                     <div class="col-md-4 col-sm-6 portfolio-item">
+                         <div class="card-shadow h-100">
+                                 <img class="img-fluid" src="{{ asset ('/uploads/' ~ project.image) }}" alt="Image du projet">
+                                 <div class="portfolio-caption">
+                                     <h4>NOM DU PROJET : {{ project.name }}</h4>
+                                     <p>DESCRIPTION : {{ project.description}} <p>ANNEE : {{ project.year}}</p></p>
+                                     <p>LANGAGE(S) : {{ project.language}}</p>
+                                     <p>LIEN VERS LE PROJET : </p>
+                                     <a href="{{ project.link}}" target="_blank" class="btn btn-outline-secondary mb-2" role="button">J'y vais !</a>
+                                 </div>
+                             </a>
+                         </div>
+                     </div>
+                    {% endfor %}
+
+                 </div>
+             </div>
+         </div>
+     </section>
+
+
+     <!-- COUNTER -->
+
+<section id="counter">
+     <div class="sectiontitle">
+         <h2>Statistiques des projets</h2>
+         <span class="headerLine"></span>
+     </div>
+     <div id="projectFacts" class="sectionClass">
+         <div class="fullWidth eight columns">
+             <div class="projectFactsWrap ">
+                 <div class="item wow fadeInUpBig animated animated" data-number="12" style="visibility: visible;">
+                     <i class="fa fa-briefcase fa-4x"></i>
+                     <p id="number1" class="number">12</p>
+                     <span></span>
+                     <p>Projets terminés</p>
+                 </div>
+                 <div class="item wow fadeInUpBig animated animated" data-number="55" style="visibility: visible;">
+                     <i class="fa fa-smile fa-4x"></i>
+                     <p id="number2" class="number">55</p>
+                     <span></span>
+                     <p>Clients satisfaits</p>
+                 </div>
+                 <div class="item wow fadeInUpBig animated animated" data-number="359" style="visibility: visible;">
+                     <i class="fa fa-coffee fa-4x"></i>
+                     <p id="number3" class="number">359</p>
+                     <span></span>
+                     <p>Tasses de café</p>
+                 </div>
+                 <div class="item wow fadeInUpBig animated animated" data-number="246" style="visibility: visible;">
+                     <i class="far fa-clock fa-4x"></i>
+                     <p id="number4" class="number">246</p>
+                     <span></span>
+                     <p>Heures de travail</p>
+                 </div>
+             </div>
+         </div>
+     </div>
+</section>
+
+     <!-- CONTACT -->
+<section id="contact">
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center m-auto">
+                    <h3>Besoin d'un projet ?</h3>
+                    <p>Dites-moi ce que vous recherchez et nous prendrons le temps ensemble d'étudier votre besoin.</p>
+                </div>
+            </div>
+            {% for category, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                <button class="btn btn-success">{{ button_label|default('Envoyer') }}</button>
+                {{ form_end(form) }}
+        </div>
+    </div>
+</section>
+ {% endblock %}
