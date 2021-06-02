@@ -1,9 +1,9 @@
 # PORTFOLIO
 
 PORTFOLIO REALISE SOUS PHP / SYMFONY 4.4
+
 VISIBLE ICI : https://portfolio-dsarrazy.herokuapp.com/
 
-![Wild Code School](https://wildcodeschool.fr/wp-content/uploads/2019/01/logo_pink_176x60.png)
 
 It's symfony website-skeleton project with some additional tools to validate code standards.
 
