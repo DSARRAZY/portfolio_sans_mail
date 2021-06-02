@@ -1,8 +1,7 @@
+# PORTFOLIO
+
 PORTFOLIO REALISE SOUS PHP / SYMFONY 4.4
 VISIBLE ICI : https://portfolio-dsarrazy.herokuapp.com/
-
-
-# Checkpoint 4 - Starter Kit - Symfony 4.4.*
 
 ![Wild Code School](https://wildcodeschool.fr/wp-content/uploads/2019/01/logo_pink_176x60.png)
 
